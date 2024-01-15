@@ -7,8 +7,6 @@ function renderTodoList() {
 
     for (let i = 0; i < todoList.length; i++) {
         const todoObject = todoList[i];
-        //const name = todoObject.name;
-        //const dueDate = todoObject.dueDate;
         const { name, dueDate } = todoObject;
         const html = `
             <div class="todo-item">
@@ -39,25 +37,23 @@ document.querySelector('.js-add-todo-button')
     });
 
 function addTodo() {
-    const inputElement = document.querySelector('.js-name-input');       //prende un elemento della classe js. e lo mette in js
-    const name = inputElement.value;                            //value rappresenta il testo nel box testo
+    const inputElement = document.querySelector('.js-name-input');    
+    const name = inputElement.value;                            
 
     const dateInputElement = document.querySelector('.js-due-date-input');
-    const dueDate = dateInputElement.value;     //prende la data e la salva nella variabile
+    const dueDate = dateInputElement.value; 
     
     if (name.trim() && dueDate.trim() !== '') {
         todoList.push({
-            //name: name,
-            //dueDate: dueDate,
             name,
             dueDate
-        });                //lo aggiunge all'array
+        });
         console.log(todoList);
     
-        inputElement.value = '';            //resetta il testo nel box testo dopo aver scritto qualcosa
+        inputElement.value = ''; 
         dateInputElement.value = '';
         
-        renderTodoList();                   //per far vedere di nuovo la lista sulla pagina
+        renderTodoList();
     } else {
         alert('Please enter a task.');
     }

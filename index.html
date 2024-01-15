@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="icon" href="img/checklist.png">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="todo-container">
+      <h2>ToDo List</h2>
+
+      <div class="row">
+          <input type="text" placeholder="Add your to-do..." class="js-name-input name-input">
+        
+          <input type="date" class="js-due-date-input due-date-input">
+
+          <button onclick="
+          addTodo();
+        " class="add-todo-button js-add-todo-button">Add</button>
+      </div>
+      
+      <div class="js-todo-list"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

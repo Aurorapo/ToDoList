@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Montserrat:wght@700&family=Open+Sans:wght@300&family=Poppins:wght@400;600;700&family=Red+Hat+Display:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+
+:root {
+    --main-color: #ccabd8;
+    --secondary-color: #8474a1;
+    --third-color: #6ec6ca;
+    --fourth-color: #08979d;
+    --fifth-color: #055b5c;
+
+    --font: 'Poppins', 'Montserrat', 'open sans';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #055b5c ,#6ec6ca);
+}
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 10px;
+    padding: 30px 20px 60px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+}
+
+.todo-container h2 {
+    color: var(--fourth-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.row,
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.name-input,
+.due-date-input {
+    flex: 1;
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.name-input:focus,
+.due-date-input:focus {
+    outline-color: var(--fourth-color);
+}
+
+button {
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.add-todo-button {
+    background-color: var(--fifth-color);
+}
+
+.delete-todo-button {
+    background-color: darkred;
+    margin-top: 5px;
+}
+
+.js-todo-list {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
